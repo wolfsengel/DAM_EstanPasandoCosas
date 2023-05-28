@@ -1,11 +1,11 @@
 package Colecciones;
 
-class Nodo {
+class Nodoarbol {
     int valor;
-    Nodo izquierdo;
-    Nodo derecho;
+    Nodoarbol izquierdo;
+    Nodoarbol derecho;
   
-    public Nodo(int valor) {
+    public Nodoarbol(int valor) {
         this.valor = valor;
         izquierdo = null;
         derecho = null;
@@ -13,7 +13,7 @@ class Nodo {
 }
 
 class ArbolBinario {
-    Nodo raiz;
+    Nodoarbol raiz;
   
     public ArbolBinario() {
         raiz = null;
@@ -24,9 +24,9 @@ class ArbolBinario {
         raiz = insertarNodo(raiz, valor);
     }
   
-    private Nodo insertarNodo(Nodo nodo, int valor) {
+    private Nodoarbol insertarNodo(Nodoarbol nodo, int valor) {
         if (nodo == null) {
-            nodo = new Nodo(valor);
+            nodo = new Nodoarbol(valor);
             return nodo;
         }
   
@@ -44,7 +44,7 @@ class ArbolBinario {
         recorridoEnOrden(raiz);
     }
   
-    private void recorridoEnOrden(Nodo nodo) {
+    private void recorridoEnOrden(Nodoarbol nodo) {
         if (nodo != null) {
             recorridoEnOrden(nodo.izquierdo);
             System.out.print(nodo.valor + " ");

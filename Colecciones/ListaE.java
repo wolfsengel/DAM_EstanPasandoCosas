@@ -1,17 +1,17 @@
 package Colecciones;
 
-class Nodo {
+class NodolistaE {
     int valor;
-    Nodo siguiente;
+    NodolistaE siguiente;
 
-    public Nodo(int valor) {
+    public NodolistaE(int valor) {
         this.valor = valor;
         siguiente = null;
     }
 }
 
 class ListaEnlazada {
-    Nodo cabeza;
+    NodolistaE cabeza;
 
     public ListaEnlazada() {
         cabeza = null;
@@ -19,19 +19,19 @@ class ListaEnlazada {
 
     // Insertar un nodo al inicio de la lista
     public void insertarAlInicio(int valor) {
-        Nodo nuevoNodo = new Nodo(valor);
+        NodolistaE nuevoNodo = new NodolistaE(valor);
         nuevoNodo.siguiente = cabeza;
         cabeza = nuevoNodo;
     }
 
     // Insertar un nodo al final de la lista
     public void insertarAlFinal(int valor) {
-        Nodo nuevoNodo = new Nodo(valor);
+        NodolistaE nuevoNodo = new NodolistaE(valor);
         
         if (cabeza == null) {
             cabeza = nuevoNodo;
         } else {
-            Nodo nodoActual = cabeza;
+            NodolistaE nodoActual = cabeza;
             while (nodoActual.siguiente != null) {
                 nodoActual = nodoActual.siguiente;
             }
@@ -41,7 +41,7 @@ class ListaEnlazada {
 
     // Imprimir los elementos de la lista
     public void imprimirLista() {
-        Nodo nodoActual = cabeza;
+        NodolistaE nodoActual = cabeza;
         while (nodoActual != null) {
             System.out.print(nodoActual.valor + " ");
             nodoActual = nodoActual.siguiente;
