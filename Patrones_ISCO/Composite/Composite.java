@@ -57,7 +57,7 @@ class HeadDepartment implements Department {
     public void setName(String newName) { name = newName; }
 
 }
-public class Composite {
+public class composite {
     public static void main(String[] args) {
         HeadDepartment headDepartment = new HeadDepartment(1, "Head Department");
         FinancialDepartment financialDepartment = new FinancialDepartment();
